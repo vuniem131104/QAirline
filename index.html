@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsives.css" />
+  </head>
+  <body>
+    <header class="fixed-header">
+      <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar">
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+          <!-- Logo -->
+          <a href="#">
+            <img class="logo" src="./assets/img/logo.svg" alt="Besnik." />
+          </a>
+
+          <!-- Navigation -->
+          <ul id="pc-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#resources">Seats</a></li>
+            <li><a href="#contact">Destination</a></li>
+            <li class="show-on-mobile"><a href="#">Sign in</a></li>
+            <li class="show-on-mobile"><a href="#">Sign up</a></li>
+          </ul>
+
+          <!-- Action -->
+          <div class="actions">
+            <a href="#!" class="action-link">Sign in</a>
+            <a href="#!" class="btn action-btn">Sign up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Tablet Mobile Header -->
+    <header class="mobile-header">
+      <input type="checkbox" name="" id="menu-checkbox" hidden />
+      <label class="menu-overlay" for="menu-checkbox"></label>
+      <div class="menu-drawer">
+        <ul id="mobile-nav"></ul>
+        <script>
+          const pcNav = document.getElementById("pc-nav");
+          const mobileNav = document.getElementById("mobile-nav");
+          mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="content">
+            <div class="main-leftcontent">
+              <img
+                src="./assets/img/destination.svg"
+                alt=""
+                width="60px"
+                class="destination"
+              />
+              <button class="ranking btn">
+                World No.1 Flight Booking Platform
+              </button>
+              <h1 class="animate__animated animate__bounce">
+                DISCOVER <span class="red-text">PREMIUM</span><br />
+                <span class="red-text">FLIGHTS</span> WITH EASE!
+              </h1>
+              <p class="des">
+                Find top destination and look effortlessly with out seamless
+                flight search and booking experience
+              </p>
+
+              <div class="main-booking">
+                <div class="flight-options">
+                  <select class="dropdown">
+                    <option value="round-trip">Round Way</option>
+                    <option value="one-way">One Way</option>
+                    <option value="multi-city">Multi-City</option>
+                  </select>
+                  <select class="dropdown">
+                    <option value="economy">Economy Class</option>
+                    <option value="business">Business Class</option>
+                    <option value="first-class">First Class</option>
+                  </select>
+                </div>
+                <div class="booking-container">
+                  <div class="flight-details">
+                    <div class="flight-details-from">
+                      <div class="detail">
+                        <div class="from">
+                          <span class="icon">✈️</span>
+                          <label for="from">From</label>
+                        </div>
+                        <div class="location">
+                          <input
+                            type="text"
+                            id="from"
+                            placeholder="Dhaka, Bangladesh"
+                          />
+                        </div>
+                      </div>
+                      <div class="detail">
+                        <div class="depart">
+                          <span class="icon">📅</span>
+                          <label for="depart">Depart</label>
+                        </div>
+                        <div class="date">
+                          <input type="date" id="depart" value="2024-09-12" />
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="flight-details-to">
+                      <div class="detail">
+                        <div class="to">
+                          <span class="icon">✈️</span>
+                          <label for="to">To</label>
+                        </div>
+                        <div class="location">
+                          <input type="text" id="to" placeholder="New York, USA" />
+                        </div>
+                      </div>
+    
+                      <div class="detail">
+                        <div class="return">
+                          <span class="icon">📅</span>
+                          <label for="return">Return</label>
+                        </div>
+                        <div class="date">
+                          <input type="date" id="return" value="2024-09-20" />
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="bottom">
+                      <!-- <input type="text" name="" id=""> -->
+                      <button class="search-btn">
+                        Search
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="main-rightcontent">
+            <img
+              src="./assets/img/plane.svg"
+              alt=""
+              class="plane"
+              width="90px"
+            />
+            <img
+              src="./assets/img/cloud.svg"
+              alt=""
+              width="100px"
+              class="cloud"
+            />
+            <img
+              class="person"
+              src="./assets/img/person1.jpeg"
+              alt=""
+              width="425px"
+            />
+            <div class="rating-container">
+              <div class="avatars">
+                <div class="avatar">
+                  <img src="./assets/img/avatar-2.jpg" alt="Avatar 1" />
+                </div>
+                <div class="avatar">
+                  <img src="./assets/img/avatar-7.jpeg" alt="Avatar 2" />
+                </div>
+                <div class="avatar">
+                  <img src="./assets/img/avatar-12.jpg" alt="Avatar 3" />
+                </div>
+                <div class="avatar">
+                  <img src="./assets/img/avatar-13.jfif" alt="Avatar 4" />
+                </div>
+              </div>
+              <div class="rating-text">
+                4.9
+                <span class="star">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clients">
+        <div class="content">
+          <img src="./assets/img/book.svg" alt="" class="book" width="60px" />
+          <img src="assets/img/main_plane.jpeg" alt="" class="main-plane" />
+          <div class="list-clients">
+            <a
+              href="https://www.singaporeair.com/en_UK/vn/home?gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csn5tN4MmyjjLYdn7XS7p_5Q0GmY7mG8nuymmbZdqfqZZKW06WaQBlMaAianEALw_wcB&gclsrc=aw.ds#/book/bookflight"
+              target="_blank"
+            >
+              <img src="./assets/img/Singapore_Airlines_Logo.svg" alt="" />
+            </a>
+            <a
+              href="https://www.emirates.com/vn/english/book/?utm_source=google&utm_medium=cpc&utm_campaign=GGS_VN_EN_Brand_Pure___VN_E&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csnIhrLferNE8yEFbiKUFCrxuQtgSHEAuxTUUrODaTyGibtIdAD0-dAaAlgQEALw_wcB&gclsrc=aw.ds"
+              target="_blank"
+            >
+              <img src="./assets/img/emirates.png" alt="" />
+            </a>
+            <a
+              href="https://www.turkishairlines.com/en-int/index.html?gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0cskJVg7lNvE4vzdhFjzBsaC-t3lzrbI8gwbSceC0ZNlq62GsCCwaUJYaAsGdEALw_wcB"
+              target="_blank"
+            >
+              <img src="./assets/img/turkish.svg" alt="" />
+            </a>
+            <a href="https://www.swiss.com/xx/en/homepage" target="_blank">
+              <img src="./assets/img/Swiss_new.svg.png" alt="" />
+            </a>
+            <a href="https://www.vietravelairlines.com/vn/en" target="_blank">
+              <img src="./assets/img/vietravelairlines.svg" alt="" />
+            </a>
+            <a
+              href="https://www.malaysiaairlines.com/vn/en/promotions/time-for-kolkata.html?cid=gpm|VN1024TFK|goo|tac|pmax|pros|vn||en|campaign|mab|awa&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csk2fn89DPrnRckSxyyDc9TKMvonDxMYyhqubZIH1hUgOU085L1m7aEaArk3EALw_wcB"
+              target="_blank"
+            >
+              <img src="./assets/img/malaysia-airlines.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="travel-ease">
+        <div class="content">
+          <h2>Travel with Ease</h2>
+          <p class="desc">
+            Benefit from 24/7 support, easy bookings, and flexible refundable
+            tickets for a hassle-free travel experience.
+          </p>
+          <div class="features">
+            <div class="feature-card">
+              <img
+                src="./assets/img/calendar.png"
+                alt="Easy Booking Process Icon"
+              />
+              <h3>Easy Booking Process</h3>
+              <p>
+                Enjoy a seamless and straightforward booking experience with our
+                user-friendly platform.
+              </p>
+            </div>
+            <div class="feature-card">
+              <img
+                src="./assets/img/customer_service.png"
+                alt="24/7 Customer Support Icon"
+              />
+              <h3>24/7 Customer Support</h3>
+              <p>
+                Get help anytime with our dedicated support team, ready to
+                assist you with any booking needs.
+              </p>
+            </div>
+            <div class="feature-card">
+              <img
+                src="./assets/img/refund.png"
+                alt="Refundable Tickets Icon"
+              />
+              <h3>Refundable Tickets</h3>
+              <p>
+                Book with confidence knowing that many of our tickets are
+                refundable, giving you flexibility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured">
+        <div class="content">
+          <header>
+            <h2 class="sub-title">Popular Destination</h2>
+            <div class="row">
+              <p class="desc">
+                Explore the world's most popular spots, find your dream getaway
+                and book your next adventure with ease!
+              </p>
+              <a href="#!" class="link">
+                <span>View All Destination</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+              </a>
+            </div>
+          </header>
+
+          <div class="list">
+            <!-- Featured item 1 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/pd_1.jpg"
+                  alt="Nikko Apartments"
+                  class="thumb"
+                />
+              </a>
+              <div class="body">
+                <div class="body-top">
+                  <a class="location">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Paris, France</span>
+                  </a>
+                  <h3 class="title">
+                    <a href="#!">The City of Love</a>
+                  </h3>
+                </div>
+
+                <div class="info">
+                  <div class="price">
+                    <span class="label">From</span>
+                    <span class="value">$1.300</span>
+                  </div>
+                  <a href="" class="btn book-now">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured item 2 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/pd_2.jpg"
+                  alt="Nikko Apartments"
+                  class="thumb"
+                />
+              </a>
+              <div class="body">
+                <div class="body-top">
+                  <a class="location">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Rome, Italy</span>
+                  </a>
+                  <h3 class="title">
+                    <a href="#!">A Journey Through History</a>
+                  </h3>
+                </div>
+
+                <div class="info">
+                  <div class="price">
+                    <span class="label">From</span>
+                    <span class="value">$1.200</span>
+                  </div>
+                  <a href="" class="btn book-now">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured item 3 -->
+            <div class="item item3">
+              <a href="#!">
+                <img
+                  src="./assets/img/pd_3.jpg"
+                  alt="Nikko Apartments"
+                  class="thumb"
+                />
+              </a>
+              <div class="body">
+                <div class="body-top">
+                  <a class="location">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Sydney, Australia</span>
+                  </a>
+                  <h3 class="title">
+                    <a href="#!">Gateway to Sydney</a>
+                  </h3>
+                </div>
+
+                <div class="info">
+                  <div class="price">
+                    <span class="label">From</span>
+                    <span class="value">$550</span>
+                  </div>
+                  <a href="" class="btn book-now">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-info">
+        <div class="content">
+          <div class="stats">
+            <div class="ex-stats">
+              <img src="./assets/img/person.png" alt="" />
+              <div class="share-ex">
+                <p class="desc-share">Share your Experience</p>
+                <div class="emojis">
+                  <span class="emoji" role="img" aria-label="Love"
+                    >&#x1F60D;</span
+                  >
+                  <span class="emoji" role="img" aria-label="Happy"
+                    >&#x1F603;</span
+                  >
+                  <span class="emoji" role="img" aria-label="Neutral"
+                    >&#x1F610;</span
+                  >
+                  <span class="emoji" role="img" aria-label="Sad"
+                    >&#x1F641;</span
+                  >
+                  <span class="emoji" role="img" aria-label="Angry"
+                    >&#x1F621;</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="num-stats">
+              <h2 class="stats-title">Fly Smart, Travel Better</h2>
+              <p class="stats-desc">
+                At QAirline, we simplify flight booking, offering the best deals
+                and personalized itineraries. With a user-friendly platform and
+                round-the-clock support, your travel plans are just a click
+                away. Start your journey with ease and confidence, knowing we've
+                got you covered.
+              </p>
+              <div class="more-details">
+                <div class="separator"></div>
+                <div class="detailed">
+                  <div class="stat-common">
+                    <span class="num">20+</span>
+                    <span class="num-desc">Years of Experience</span>
+                  </div>
+
+                  <div class="stat-common stat-commonn">
+                    <span class="num">100 M+</span>
+                    <span class="num-desc">Happy Travelers</span>
+                  </div>
+
+                  <div class="stat-common stat-commonn">
+                    <span class="num">175</span>
+                    <span class="num-desc">Countried Covered</span>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="content">
+          <div class="slides-wrapper">
+            <div class="slide slide1">
+              <div class="testimonial-text">
+                <h3>Listen from Our Traveler</h3>
+
+                <div class="comments">
+                  <p class="comment comment-1 active-hover">
+                    <strong>
+                      Booking with
+                      <span style="color: #e6e1e1; font-weight: 700"
+                        >QAirline</span
+                      >
+                    </strong>
+                    was a breeze! Great customer support, easy process, and
+                    refundable tickets made it stress-free. Highly recommend!
+                  </p>
+                  <p class="comment comment-2">
+                    <strong>
+                      Traveling with
+                      <span style="color: #e6e1e1; font-weight: 700"
+                        >QAirline</span
+                      >
+                    </strong>
+                    was smooth and comfortable! Great services and friendly
+                    staff. I was impressed with the experience and i love it.
+                  </p>
+                  <p class="comment comment-3">
+                    I had an excellent experience booking tickets on
+                    <span style="color: #e6e1e1; font-weight: 700"
+                      >QAirline</span
+                    >. The process was easy, and the staff was helpful and
+                    always willing to assist customers.
+                  </p>
+                  <p class="comment comment-4">
+                    The flight was fantastic!
+                    <span style="color: #e6e1e1; font-weight: 700"
+                      >QAirline</span
+                    >
+                    made everything easy. I really enjoyed my trip and recommend
+                    it to everyone, especially my loved one.
+                  </p>
+                  <p class="comment comment-5">
+                    <span style="color: #e6e1e1; font-weight: 700"
+                      >QAirline</span
+                    >
+                    made my vacation stress-free! Excellent services.
+                    Additionally, the staff was friendly and helpful. I highly
+                    recommend it to everyone.
+                  </p>
+                </div>
+
+                <div class="rating">
+                  <div class="stars">★★★★★</div>
+                  <span class="rating-value">4.9/5.0</span>
+                </div>
+                <p class="name">Ralph Edwards</p>
+                <p class="job">Medical Assistant</p>
+              </div>
+
+              <div class="world-map">
+                <img src="./assets/img/map.svg" alt="World Map" class="world" />
+
+                <div
+                  class="person-icon person-1"
+                  data-comment="1"
+                  data-name="Ralph Edwards"
+                  data-job="Medical Assistant"
+                  data-rating="4.9/5.0"
+                >
+                  <img src="./assets/img/avatar-12.jpg" alt="Person 1" />
+                </div>
+
+                <div
+                  class="person-icon person-2"
+                  data-comment="2"
+                  data-name="Lena Leyer"
+                  data-job="Software Engineer"
+                  data-rating="4.8/5.0"
+                >
+                  <img src="./assets/img/avatar-13.jfif" alt="Person 2" />
+                </div>
+
+                <div
+                  class="person-icon person-3"
+                  data-comment="3"
+                  data-name="Emily Johnson"
+                  data-job="Graphic Designer"
+                  data-rating="4.7/5.0"
+                >
+                  <img src="./assets/img/avatar-7.jpeg" alt="Person 3" />
+                </div>
+
+                <div
+                  class="person-icon person-4"
+                  data-comment="4"
+                  data-name="Sophia Brown"
+                  data-job="Marketing Specialist"
+                  data-rating="4.9/5.0"
+                >
+                  <img src="./assets/img/avatar-6.jpg" alt="Person 4" />
+                </div>
+
+                <div
+                  class="person-icon person-5"
+                  data-comment="5"
+                  data-name="James Williams"
+                  data-job="Project Manager"
+                  data-rating="5.0/5.0"
+                >
+                  <img src="./assets/img/avatar-9.jpg" alt="Person 5" />
+                </div>
+              </div>
+            </div>
+            <div class="slide slide2">
+              <div class="staffs-show">
+                <h3>Meet Our Crew</h3>
+                <p class="desc">
+                  We provide the best services with our professional and
+                  friendly staffs.
+                </p>
+                <div class="staffs">
+                  <img src="./assets/img/pilot1.jpg" alt="" />
+                  <img src="./assets/img/staff1.jpg" alt="" />
+                  <img src="./assets/img/pilot2.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="slide slide3">
+              <div class="testimonial-text">
+                <h3>Spectacular Views</h3>
+                <img
+                  src="./assets/img/pd_1.jpg"
+                  alt=""
+                  class="beautiful-place"
+                />
+              </div>
+              <div class="world-map">
+                <img src="./assets/img/map.svg" alt="World Map" class="world" />
+                <div
+                  class="location-1 locationn"
+                  image="./assets/img/pd_1.jpg"
+                  data-text="Paris, France"
+                >
+                  <img src="./assets/img/location.svg" alt="location" />
+                </div>
+
+                <div
+                  class="location-2 locationn"
+                  image="./assets/img/pd_2.jpg"
+                  data-text="Rome, Italy"
+                >
+                  <img src="./assets/img/location.svg" alt="location" />
+                </div>
+
+                <div
+                  class="location-3 locationn"
+                  image="./assets/img/pd_3.jpg"
+                  data-text="Sydney, Autralia"
+                >
+                  <img src="./assets/img/location.svg" alt="location" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrow-slide arrow-left" onclick="changeSlide(-1)">
+            &#10094;
+          </div>
+          <div class="arrow-slide arrow-right" onclick="changeSlide(1)">
+            &#10095;
+          </div>
+          <div class="dot-parent">
+            <div class="dots-container">
+              <span class="dot" onclick="goToSlide(0)"></span>
+              <span class="dot" onclick="goToSlide(1)"></span>
+              <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <div class="content">
+          <h2>Get the Answers You Need</h2>
+          <p class="desc">
+            Got questions? We've got answers! Here are the top six FAQs to help
+            make your booking experience smooth and stress-free.
+          </p>
+
+          <div class="faq-container">
+            <div class="faq-box">
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+            </div>
+            <div class="faq-box not-on-mobile">
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+              <div class="faq-item">
+                <div class="question-box" onclick="toggleAnswer(this)">
+                  <p class="question">Can I change or cancel my booking?</p>
+                  <button class="operator">+</button>
+                </div>
+
+                <p class="answer">
+                  Yes, you can change or cancel your booking. However, the
+                  ability to do so depends on the airline's policies and the
+                  type of ticket you purchased. Some tickets, such as
+                  non-refundable fares, may have restrictions or fees associated
+                  with changes or cancellations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscription">
+        <div class="content">
+          <div class="newsletter">
+            <img src="./assets/img/sunset2.jpeg" alt="" />
+            <div class="main-form">
+              <h2>Newsletter</h2>
+              <p class="desc">
+                Join our newsletter for the latest flight deals, travel tips,
+                and updates on top destinations!
+              </p>
+              <div class="input-container">
+                <input
+                  type="email"
+                  placeholder="Enter your mail address"
+                  class="email-input"
+                />
+                <button type="submit" class="subscribe-btn btn">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

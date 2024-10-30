@@ -122,7 +122,7 @@
         position: fixed;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
+        z-index: 30;
         opacity: 0;
         visibility: hidden;
         transition: .5s ease;
@@ -132,7 +132,7 @@
         position: fixed;
         background-color: white;
         inset: 0 40% 0 0;
-        z-index: 2;
+        z-index: 40;
         transform: translateX(-100%);
         transition: .5s ease;
     }
@@ -171,13 +171,12 @@
     .featured .list {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 20px;
-        grid-template-rows: auto auto;
     }
 
-    .featured .item3 {
+    /* .featured .item3 {
         grid-column: 1 / -1;
         justify-self: center;
-    }
+    } */
 
 
 }
@@ -236,7 +235,8 @@
     }
 
     .fixed-header .action-btn {
-        padding: 10px;
+        min-width: 70px;
+        padding: 10px 15px;
     }
 
     main .main-content .destination {
@@ -336,7 +336,8 @@
     }
 
     .operator {
-        font-size: 1.5rem;
+        padding-bottom: 2px;
+        font-size: 1.3rem;
         width: 15px;
         height: 15px;
     }

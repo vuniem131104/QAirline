@@ -77,6 +77,42 @@ locations.forEach(location => {
     location.addEventListener('mouseenter', () => {
         const imageSrc = location.getAttribute('image');
         beautiful_place.src = imageSrc;
-      });
+    });
 
 });
+
+function openSignin() {
+    document.querySelector('.overlay').style.display = 'block';
+    const signinForm = document.querySelector('.signin-form');
+    signinForm.style.display = 'flex';
+    setTimeout(() => {
+        signinForm.classList.add("showSign");
+    }, 10);
+    document.body.classList.add('no-scroll');
+}
+
+function openSignup() {
+    document.querySelector('.overlay').style.display = 'block';
+    const signupForm = document.querySelector('.signup-form');
+    signupForm.style.display = 'flex';
+    setTimeout(() => {
+        signupForm.classList.add("showSign");
+    }, 10);
+    document.body.classList.add('no-scroll');
+}
+
+function closeForms() {
+    document.querySelector('.overlay').style.display = 'none';
+    document.body.classList.remove('no-scroll');
+    const signinForm = document.querySelector('.signin-form');
+    const signupFrom = document.querySelector('.signup-form');
+
+    signinForm.classList.remove('showSign');
+    signupFrom.classList.remove('showSign');
+
+
+    setTimeout(() => {
+        signinForm.style.display = 'none';
+        signupFrom.style.display = 'none';
+    }, 300);
+}
